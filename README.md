@@ -1,30 +1,66 @@
 # CF-Workers-GitHub-Proxy
-### 本仓库为优化改版
-#### 2025.5.25修改，现已支持github api加速！🎉🎉🎉
-## 预览
+
+
+> [!WARNING]
+> 项目可能会触发**疑似钓鱼网站**警告或域名封禁，
+> 
+> 请通过环境变量 `URL` 赋值 **nginx** 或 `URL302` 设置302跳转域名进行伪装。
+>
+> 请一定要禁用默认的'workers.dev'域名
+
+> [!WARNING]
+> 根据 [Cloudflare 协议](https://www.cloudflare.com/zh-cn/terms/) 中，2.2.1 第 (j) use the Services to provide a virtual private network or other similar proxy services.
+>
+> 使用本服务可能存在被 Cloudflare 封号的潜在风险，请自行斟酌使用风险。
+>
+> 如果你选择了“根据主机名选择对应的上游地址”方式部署，你**可能**会:
+> 
+> 被 Netcraft 扫描到，收到警告邮件
+>
+> 被 Netcraft 同步到 Google Safe Browsing 标记为钓鱼网站
+>
+> 被 Netcraft 投诉到 Cloudflare 标记为钓鱼网站, 无法正常 pull 镜像
+>
+> 收到律师函
+
+## 服务预览
 <details>
   <summary>桌面端预览</summary>
-![desktop](src/desktop.png)
+  <img src="src/desktop.png" alt="desktop" />
 </details>
 <details>
   <summary>移动端预览</summary>
-![mobile](src/mobile.png)
+  <img src="src/mobile.png" alt="mobile" />
 </details>
 
 ## 简介
-github release、archive以及项目文件的加速项目，支持clone，github api，Cloudflare Workers 版本
+GitHub Release、Archive以及项目文件的加速项目，支持clone，GitHubAPI，使用 Cloudflare Workers/Pages 部署
 
-## 使用
+## 公共DEMO
 
-直接在copy出来的url前加`https://ghfile.geekertao.top/`,`https://gh.geekertao.top/`,`https://github.dpik.top/`或`https://gh.felicity.ac.cn/`即可
-
-也可以直接访问，在input输入
+ - `https://ghfile.geekertao.top/`
+ - `https://gh.geekertao.top/`
+ - `https://github.dpik.top/`
+ - `https://gh.felicity.ac.cn/`
+ - `https://fgp.120322.dpdns.org/`
 
 ***大量使用建议自行部署，以上域名仅为演示使用，可以轻量使用。***
 
-访问私有仓库可以通过
+## 使用
 
-`git clone https://user:TOKEN@ghfile.geekertao.top/https://github.com/xxxx/xxxx`，`git clone https://user:TOKEN@github.dpik.top/https://github.com/xxxx/xxxx`，`git clone https://user:TOKEN@gh.felicity.ac.cn/https://github.com/xxxx/xxxx` [#71](https://github.com/hunshcn/gh-proxy/issues/71)
+直接在copy出来的url前加网址即可
+
+也可以直接访问，在input输入
+
+---
+
+访问私有仓库可以通过 [#71](https://github.com/hunshcn/gh-proxy/issues/71)
+
+在域名前`user:TOKEN@`的方法
+
+例如`git clone https://user:TOKEN@ghfile.XXXX.top/https://github.com/xxxx/xxxx`
+
+---
 
 以下都是合法输入（仅示例，文件不存在）：
 
@@ -41,6 +77,9 @@ github release、archive以及项目文件的加速项目，支持clone，github
 - gist：https://gist.githubusercontent.com/cielpy/351557e6e465c12986419ac5a4dd2568/raw/cmd.py
 
 - api：https://api.github.com/repos/Geekertao/CF-Workers-GitHub-Proxy
+
+
+
 ## Workers 部署方法
 ### 部署 Cloudflare Worker：
 
