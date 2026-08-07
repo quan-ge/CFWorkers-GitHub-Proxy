@@ -1,0 +1,6 @@
+name = "cfworkers-github-proxy"
+main = "worker.js"
+compatibility_date = "2025-07-19"
+
+[site]
+bucket = "./public"

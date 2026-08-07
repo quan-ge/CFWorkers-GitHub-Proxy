@@ -1,6 +1,5 @@
 'use strict'
 
-
 // 前缀，如果自定义路由为example.com/gh/*，将PREFIX改为 '/gh/'，注意，少一个杠都会错！
 const PREFIX = '/'
 
@@ -10,7 +9,15 @@ const Config = {
 }
 
 // 字面意思
-let 屏蔽爬虫UA = ['netcraft'];
+let 屏蔽爬虫UA = [
+	'netcraft',
+	'Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)',
+	'Mozilla/4.0 (compatible; Netcraft Web Server Survey)',
+	'Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0/cc-prepass-https; info@netcraft.com)',
+	'Netcraft SSL Server Survey - contact info@netcraft.com',
+	'NETCRAFT',
+	'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Netcraft SSL Server Survey - contact info@netcraft.com)'
+];
 
 // 白名单，路径中包含白名单字符的请求才会通过，例如 ['/username/']
 const whiteList = [] 
@@ -64,11 +71,13 @@ function newUrl(urlStr) {
 function checkUrl(u) {
 	for (let i of [exp1, exp2, exp3, exp4, exp5, exp6, exp7]) {
 		if (u.search(i) === 0) {
-			return true // 如果匹配，返回true
+			return true
 		}
 	}
-	return false // 如果不匹配，返回false
+	return false
 }
+ // 如果匹配，返回true
+ // 如果不匹配，返回false
 
 /**
  * 处理HTTP请求
@@ -87,12 +96,6 @@ function httpHandler(req, pathname) {
 
 	const reqHdrNew = new Headers(reqHdrRaw)
 
-	// 修改Accept-Language请求头，将zh-CN替换为zh-SG
-	if (reqHdrNew.has('accept-language')) {
-		const acceptLanguage = reqHdrNew.get('accept-language')
-		const modifiedAcceptLanguage = acceptLanguage.replace('zh-CN', 'zh-SG')
-		reqHdrNew.set('accept-language', modifiedAcceptLanguage)
-	}
 
 	let urlStr = pathname
 	let flag = !Boolean(whiteList.length) // 如果白名单为空，默认允许
