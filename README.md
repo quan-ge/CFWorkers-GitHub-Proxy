@@ -1,5 +1,5 @@
 # CF-Workers-GitHub-Proxy
-
+#### 本仓库为优化改版
 
 > [!WARNING]
 > 项目可能会触发**疑似钓鱼网站**警告或域名封禁，
@@ -84,7 +84,7 @@ GitHub Release、Archive以及项目文件的加速项目，支持clone，GitHub
 ### 部署 Cloudflare Worker：
 
    - 在 Cloudflare Worker 控制台中创建一个新的 Worker。
-   - 将 [workers.js](./workers.js)  的内容粘贴到 Worker 编辑器中。
+   - 将 [workers.js](/worker.js)  的内容粘贴到 Worker 编辑器中。
 
 ## Pages 部署方法
 ### 部署 Cloudflare Pages：
