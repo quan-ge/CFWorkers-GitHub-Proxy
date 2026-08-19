@@ -98,7 +98,7 @@ GitHub Release、Archive以及项目文件的加速项目，支持clone，GitHub
 [gh-proxy](https://github.com/hunshcn/gh-proxy)、[jsproxy](https://github.com/EtherDream/jsproxy/)、[cmliu/CF-Workers-GitHub](https://github.com/cmliu/CF-Workers-GitHub/)、[hubporg/CF-GitHub-Proxy](https://github.com/hubporg/CF-GitHub-Proxy)
 
 # 赞助
-<a href="https://afdian./a/Geekertao" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
+<a href="https://afdian.com/a/QUAN_GE" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
       <img src="https://img.shields.io/badge/💵_爱发电-FF4D4D?style=flat-square&logo=usd&logoColor=white" alt="爱发电" style="max-height: 50px;">
     </a>
 
