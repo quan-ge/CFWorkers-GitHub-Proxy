@@ -95,7 +95,14 @@ GitHub Release、Archive以及项目文件的加速项目，支持clone，GitHub
 
 
 # 致谢
-[gh-proxy](https://github.com/hunshcn/gh-proxy)、[jsproxy](https://github.com/EtherDream/jsproxy/)、[cmliu/CF-Workers-GitHub](https://github.com/cmliu/CF-Workers-GitHub/)、[hubporg/CF-GitHub-Proxy](https://github.com/hubporg/CF-GitHub-Proxy)
+
+本项目基于这些项目修改而来
+
+[cmliu/CF-Workers-GitHub](https://github.com/cmliu/CF-Workers-GitHub/)、[hubporg/CF-GitHub-Proxy](https://github.com/hubporg/CF-GitHub-Proxy)
+
+特别鸣谢
+
+[gh-proxy](https://github.com/hunshcn/gh-proxy)、[jsproxy](https://github.com/EtherDream/jsproxy/)
 
 # 赞助
 <a href="https://afdian.com/a/QUAN_GE" target="_blank" rel="noopener noreferrer" style="flex-shrink: 0;">
